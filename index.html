@@ -1,0 +1,68 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META name="GENERATOR" content="IBM WebSphere Studio Homepage Builder Version 13.0.0.0 for Windows">
+    <link rel="stylesheet" href="style.css">
+<TITLE>統計</TITLE>
+</HEAD>
+<BODY>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<h1>【　統計　】</h1>
+
+<p id="buttom"><strong>表示</strong></p><br>
+<p class="di"><b>｢統計｣</b></p>とは、収集したデータの規則性を調べたり、先のことを予想したりするための手法のことです。<br>
+<strong>(1)データの代表値</strong><br>
+<p class="di"><b>｢データの代表値｣</b></p>とは、データ全体の特性のひとつの数値で表現するものです。データの代表値として、次のような数値が使われます。<br>
+<P><IMG src="1-1-2-2-1.JPG" width="500" border="0"></P>
+
+<strong>(2)データの散布度</strong><br>
+<p class="di"><b>｢データの散布度｣</b></p>とは、個々のデータが平均値のまわりでどのようにばらついているかの度合いを数値で表現するものです。同じ平均値を持つデータの集まりでも、次のように特徴が異なる場合もあります。<br>
+<P><IMG src="1-1-2-2-2.JPG" width="500" border="0"></P>
+
+この違いを表現する数値が、散布度の指標となる<p class="di"><b>｢分散｣</b></p>、<p class="di"><b>｢標準偏差｣</b></p>、<p class="di"><b>｢レンジ｣</b></p>などです。<br>
+<P><IMG src="1-1-2-2-3.JPG" width="500" border="0"></P>
+
+AグループとBグループの平均値は同じですが、散布度を計算すると次のようになります。<br>
+<P><IMG src="1-1-2-2-4.JPG" width="500" border="0"></P>
+
+平均値だけではデータがどのようになっているか正確に分析できませんが、散布度を見ると、全体の分布状態を正確に把握できます。<br>
+<strong>(3)散布図</strong><br>
+<p class="di"><b>｢散布図｣</b></p>とは、2つの属性値を縦軸と横軸にとって、2種類のデータ間の相関係数を表したものです。例えば、正の相関のグラフからは、雨がよく降る年は傘がたくさん売れるといった原因と現象の関係がわかります。負の相関のグラフからは、暑い日にはラーメンの売上が悪いということから気温が上がると売上が下がるという関係がわかります。無相関のグラフからは、日照時間とコーヒーの売上との間にはお互いに関係がないことがわかります。<br>
+<P><IMG src="1-1-2-2-5.JPG" width="500" border="0"></P>
+
+散布図を応用したものに<p class="di"><b>｢回帰直線｣</b></p>があります。回帰直線とは、2種類のデータ間に相関関係があるとき、その関係を直線で表したものです。<br>
+2種類のデータをx、yとした場合、回帰直線はy=ax+bの計算式で表すことができます。このときaを回帰直線の傾き、bを切片といいます。例えば、次のグラフからは、年間降水量が予測できれば、その量から傘の売上も予測できるようになります。<br>
+回帰直線は、各点からの距離が最短になるような直線として求めます。<br>
+この求め方を<p class="di"><b>｢最小2乗法｣</b></p>といいます。<br>
+<P><IMG src="1-1-2-2-6.JPG" width="500" border="0"></P>
+
+<strong>(4)ヒストグラム</strong><br>
+<p class="di"><b>｢ヒストグラム｣</b></p>とは、集計したデータの範囲をいくつかの区間に分け、区間に入るデータの数を棒グラフで表したものです。<br>
+ヒストグラムを作成すると、データの全体像、中心の位置、ばらつきの大きさなどを確認できます。例えば、次のグラフからは、○×町で年代別にタブレット端末の保有者数を調べたところ21~30歳が最も多く、次に10~20歳、31~40歳と続き、51歳以上が最も少ないということがわかります。<br>
+<P><IMG src="1-1-2-2-7.JPG" width="500" border="0"></P>
+
+<strong>(5)推定</strong><br>
+データ数が多く、すべてのデータを調査するのが困難な場合、いくつかのデータを取り出して調査を行います。このとき、すべてのデータを<p class="di"><b>｢母集団｣</b></p>、いくつかのデータを<p class="di"><b>｢標本｣</b></p>といいます。<br>
+<p class="di"><b>｢推定｣</b></p>とは、このデータ数の少ない標本から、できるだけの精度の高い平均値を求め、母集団の傾向を判断するときに使われる統計的手法のことです。標本の平均値から、母集団の平均値(母平均)を推測し、母集団の統計学的な性質を推測します。<br>
+
+<script>
+    const buttom = document.getElementById('buttom');
+    const diElements = document.querySelectorAll('.di'); // クラスの要素をすべて取得
+
+    // マウスホバー時
+    buttom.addEventListener('mouseover', () => {
+        diElements.forEach(di => {
+            di.style.opacity = '1';
+        });
+    }, false);
+
+    // マウスが離れている時
+    buttom.addEventListener('mouseleave', () => {
+        diElements.forEach(di => {
+            di.style.opacity = '0';
+        });
+    }, false);
+</script>
